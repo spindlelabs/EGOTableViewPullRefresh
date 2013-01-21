@@ -28,6 +28,7 @@
 
 
 #define TEXT_COLOR	 [UIColor colorWithRed:87.0/255.0 green:108.0/255.0 blue:137.0/255.0 alpha:1.0]
+#define SHADOW_COLOR [UIColor colorWithRed:4.0f/255.0f green:44.0f/255.0f blue:57.0f/255.0f alpha:1.0]
 #define FLIP_ANIMATION_DURATION 0.18f
 
 
@@ -40,7 +41,7 @@
 @synthesize delegate=_delegate;
 
 
-- (id)initWithFrame:(CGRect)frame arrowImageName:(NSString *)arrow textColor:(UIColor *)textColor  {
+- (id)initWithFrame:(CGRect)frame arrowImageName:(NSString *)arrow textColor:(UIColor *)textColor textShadowColor:(UIColor *)shadowColor  {
     if((self = [super initWithFrame:frame])) {
 		
 		self.autoresizingMask = UIViewAutoresizingFlexibleWidth;
@@ -50,7 +51,7 @@
 		label.autoresizingMask = UIViewAutoresizingFlexibleWidth;
 		label.font = [UIFont systemFontOfSize:12.0f];
 		label.textColor = textColor;
-        label.shadowColor = [UIColor colorWithRed:4.0f/255.0f green:44.0f/255.0f blue:57.0f/255.0f alpha:1.0];
+        label.shadowColor = shadowColor;
 		label.shadowOffset = CGSizeMake(0.0f, 1.0f);
 		label.backgroundColor = [UIColor clearColor];
 		label.textAlignment = UITextAlignmentCenter;
@@ -62,7 +63,7 @@
 		label.autoresizingMask = UIViewAutoresizingFlexibleWidth;
 		label.font = [UIFont boldSystemFontOfSize:13.0f];
 		label.textColor = textColor;
-        label.shadowColor = [UIColor colorWithRed:4.0f/255.0f green:44.0f/255.0f blue:57.0f/255.0f alpha:1.0];
+        label.shadowColor = shadowColor;
 		label.shadowOffset = CGSizeMake(0.0f, 1.0f);
 		label.backgroundColor = [UIColor clearColor];
 		label.textAlignment = UITextAlignmentCenter;
@@ -100,7 +101,7 @@
 }
 
 - (id)initWithFrame:(CGRect)frame  {
-  return [self initWithFrame:frame arrowImageName:@"blueArrow.png" textColor:TEXT_COLOR];
+    return [self initWithFrame:frame arrowImageName:@"blueArrow.png" textColor:TEXT_COLOR textShadowColor:SHADOW_COLOR];
 }
 
 #pragma mark -
