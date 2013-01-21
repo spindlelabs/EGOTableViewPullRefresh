@@ -27,7 +27,8 @@
 #import "EGORefreshTableHeaderView.h"
 
 
-#define TEXT_COLOR	 [UIColor colorWithRed:87.0/255.0 green:108.0/255.0 blue:137.0/255.0 alpha:1.0]
+#define TEXT_COLOR      [UIColor colorWithRed:148.0/255.0 green:145.0/255.0 blue:140.0/255.0 alpha:1.0]
+#define SHADOW_COLOR    [UIColor colorWithRed:247.0/255.0 green:246.0/255.0 blue:237.0/255.0 alpha:1.0]
 #define FLIP_ANIMATION_DURATION 0.18f
 
 
@@ -50,7 +51,7 @@
 		label.autoresizingMask = UIViewAutoresizingFlexibleWidth;
 		label.font = [UIFont systemFontOfSize:12.0f];
 		label.textColor = TEXT_COLOR;
-		label.shadowColor = [UIColor colorWithWhite:0.9f alpha:1.0f];
+		label.shadowColor = SHADOW_COLOR;
 		label.shadowOffset = CGSizeMake(0.0f, 1.0f);
 		label.backgroundColor = [UIColor clearColor];
 		label.textAlignment = UITextAlignmentCenter;
@@ -62,7 +63,7 @@
 		label.autoresizingMask = UIViewAutoresizingFlexibleWidth;
 		label.font = [UIFont boldSystemFontOfSize:13.0f];
 		label.textColor = TEXT_COLOR;
-		label.shadowColor = [UIColor colorWithWhite:0.9f alpha:1.0f];
+		label.shadowColor = SHADOW_COLOR;
 		label.shadowOffset = CGSizeMake(0.0f, 1.0f);
 		label.backgroundColor = [UIColor clearColor];
 		label.textAlignment = UITextAlignmentCenter;
